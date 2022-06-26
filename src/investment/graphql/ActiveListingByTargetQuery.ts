@@ -13,6 +13,7 @@ export const ACTIVE_LISTING_BY_TARGET_QUERY = gql`
   query ActiveListingByTarget($contractAndTokenId: String!) {
     listings(where: { status_not: "ENDED", target_contains: $contractAndTokenId }) {
       id
+      status
       amount
       sellerNetAmount
       sellerFeeAmount

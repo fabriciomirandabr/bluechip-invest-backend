@@ -8,6 +8,6 @@ export class Buyer {
   amount: string
   @Field()
   ownership: string
-  @Field()
+  @Field({ nullable: true })
   fractionsCount: string
 }

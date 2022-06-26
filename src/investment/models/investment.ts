@@ -5,6 +5,8 @@ import { Listing } from './listing'
 export class Investment {
   @Field()
   contractAddress: string
+  @Field()
+  availableTokenId: string
   @Field({ nullable: true })
   name?: string
   @Field({ nullable: true })
@@ -23,6 +25,6 @@ export class Investment {
   whalesRankToday?: number
   @Field(() => Listing, { nullable: true })
   activeRound?: Listing
-  @Field(() => Listing, { nullable: true })
-  lastRound?: Listing
+  @Field(() => [Listing], { nullable: true })
+  lastRounds?: Listing[]
 }

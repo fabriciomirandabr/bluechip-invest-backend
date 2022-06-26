@@ -13,6 +13,7 @@ export const LISTING_BY_ID_QUERY = gql`
   query ListingById($listingId: String!) {
     listing(id: $listingId) {
       id
+      status
       amount
       sellerNetAmount
       sellerFeeAmount

@@ -1,6 +1,14 @@
 import * as dotenv from 'dotenv'
 dotenv.config()
 
+interface GlobalConfig {
+  pinataKey: string
+}
+
+export const globalConfig: GlobalConfig = {
+  pinataKey: process.env.PINATA_KEY
+}
+
 interface ChainConfig {
   chainId: number
   name: string
